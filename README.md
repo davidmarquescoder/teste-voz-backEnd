@@ -73,40 +73,6 @@ php artisan migrate
 [http://localhost:8989/api](http://localhost:8989/api)
 
 
-<!-- # API ENDPOINTS
-
-## **Produtos**
-
-### **1. `GET` /products/**
-Retorna uma lista paginada de produtos no formato JSON.
-
-#### **Parâmetros de Query**:
-| Parâmetro  | Tipo    | Obrigatório | Descrição                                  |
-|------------|---------|-------------|------------------------------------------|
-| `per_page` | Inteiro | Não         | Define a quantidade de itens por página. |
-
----
-
-### **2. `POST` /products/**
-Cria um novo produto.  
-- O corpo da requisição deve conter os dados necessários para o cadastro do produto no formato JSON.
-
----
-
-### **3. `GET` /products/{ID}**
-Retorna as informações detalhadas de um produto específico identificado pelo seu `ID`.
-
----
-
-### **4. `PATCH` /products/{ID}**
-Atualiza as informações de um produto específico identificado pelo seu `ID`.  
-- O corpo da requisição deve conter os dados a serem atualizados no formato JSON.
-
----
-
-### **5. `DELETE` /products/{ID}**
-Remove um produto específico identificado pelo seu `ID` do sistema.
-
 --- -->
 # API Produtos
 
