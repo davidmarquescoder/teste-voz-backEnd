@@ -27,6 +27,7 @@ class ProductController extends Controller
             return $this->success(
                 message: __(key: 'messages.response_messages.products.index'),
                 data: $products,
+                code: Response::HTTP_OK,
             );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
@@ -46,6 +47,7 @@ class ProductController extends Controller
             return $this->success(
                 message: __(key: 'messages.response_messages.products.store'),
                 data: $newProduct,
+                code: Response::HTTP_CREATED,
             );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
@@ -63,6 +65,7 @@ class ProductController extends Controller
             return $this->success(
                 message: __(key: 'messages.response_messages.products.show'),
                 data: $product,
+                code: Response::HTTP_OK,
             );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
@@ -83,6 +86,7 @@ class ProductController extends Controller
             return $this->success(
                 message: __(key: 'messages.response_messages.products.update'),
                 data: $product,
+                code: Response::HTTP_OK,
             );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
