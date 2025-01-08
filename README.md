@@ -74,6 +74,8 @@ php artisan migrate
 
 
 ---
+
+
 # API Produtos
 
 Esta API fornece endpoints para a gestão de produtos. Você pode listar, criar, atualizar e deletar produtos. 
