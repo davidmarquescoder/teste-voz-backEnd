@@ -73,7 +73,7 @@ php artisan migrate
 [http://localhost:8989/api](http://localhost:8989/api)
 
 
---- -->
+---
 # API Produtos
 
 Esta API fornece endpoints para a gestão de produtos. Você pode listar, criar, atualizar e deletar produtos. 
