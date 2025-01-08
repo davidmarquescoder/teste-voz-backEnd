@@ -77,8 +77,11 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request, Product $product): JsonResponse
     {
         try {
+            $product->update(attributes: $request->validated());
+
             return $this->success(
                 message: __(key: 'messages.response_messages.products.update'),
+                data: $product,
             );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
