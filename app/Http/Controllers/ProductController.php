@@ -8,6 +8,7 @@ use App\Models\Product;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class ProductController extends Controller
 {
@@ -96,8 +97,11 @@ class ProductController extends Controller
     public function destroy(Product $product): JsonResponse
     {
         try {
+            $product->delete();
+
             return $this->success(
                 message: __(key: 'messages.response_messages.products.destroy'),
+                code: Response::HTTP_NO_CONTENT,
             );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
