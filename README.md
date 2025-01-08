@@ -76,51 +76,6 @@ php artisan migrate
 ---
 
 
-# API Produtos
-
-Esta API fornece endpoints para a gestão de produtos. Você pode listar, criar, atualizar e deletar produtos. 
-
-## **Como Usar**
-
-### **Requisitos**
-- PHP 8.0 ou superior
-- Laravel 9.x ou superior
-- Banco de Dados configurado (MySQL, PostgreSQL, etc.)
-
-### **Configuração**
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   ```
-
-2. Instale as dependências do Composer:
-   ```bash
-   composer install
-   ```
-
-3. Copie o arquivo `.env.example` para `.env` e configure suas variáveis de ambiente, incluindo o banco de dados:
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Gere a chave da aplicação:
-   ```bash
-   php artisan key:generate
-   ```
-
-5. Execute as migrações para configurar o banco de dados:
-   ```bash
-   php artisan migrate
-   ```
-
-6. Inicie o servidor local:
-   ```bash
-   php artisan serve
-   ```
-
-   O servidor estará disponível em: [http://localhost:8000](http://localhost:8000)
-
 # **API ENDPOINTS**
 
 Use ferramentas como [Postman](https://www.postman.com/) para testar os endpoints da API.
