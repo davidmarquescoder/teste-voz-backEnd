@@ -40,8 +40,11 @@ class ProductController extends Controller
     public function store(CreateProductRequest $request): JsonResponse
     {
         try {
+            $newProduct = Product::create(attributes: $request->validated());
+
             return $this->success(
                 message: __(key: 'messages.response_messages.products.store'),
+                data: $newProduct,
             );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
