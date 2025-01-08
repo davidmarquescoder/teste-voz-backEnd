@@ -7,17 +7,26 @@ use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
 use Exception;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      * @return JsonResponse
+     * @param Request $request
      */
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
         try {
-            return $this->success(message: '');
+            $products = Product::paginate(
+                perPage: $request->query(key: 'per_page', default: 10)
+            );
+
+            return $this->success(
+                message: __(key: 'messages.response_messages.products.index'),
+                data: $products,
+            );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
         }
@@ -31,7 +40,9 @@ class ProductController extends Controller
     public function store(CreateProductRequest $request): JsonResponse
     {
         try {
-            return $this->success(message: '');
+            return $this->success(
+                message: __(key: 'messages.response_messages.products.store'),
+            );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
         }
@@ -45,7 +56,9 @@ class ProductController extends Controller
     public function show(Product $product): JsonResponse
     {
         try {
-            return $this->success(message: '');
+            return $this->success(
+                message: __(key: 'messages.response_messages.products.show'),
+            );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
         }
@@ -60,7 +73,9 @@ class ProductController extends Controller
     public function update(UpdateProductRequest $request, Product $product): JsonResponse
     {
         try {
-            return $this->success(message: '');
+            return $this->success(
+                message: __(key: 'messages.response_messages.products.update'),
+            );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
         }
@@ -74,7 +89,9 @@ class ProductController extends Controller
     public function destroy(Product $product): JsonResponse
     {
         try {
-            return $this->success(message: '');
+            return $this->success(
+                message: __(key: 'messages.response_messages.products.destroy'),
+            );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
         }
