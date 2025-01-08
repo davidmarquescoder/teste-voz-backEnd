@@ -22,5 +22,12 @@ return [
             'update'           => 'Atualização de produto bem sucedida.',
             'destroy'          => 'Produto removido da nossa base de dados.',
         ],
+        'categories' => [
+            'index'            => 'Categorias recuperadas em nossa base de dados.',
+            'store'            => 'Nova categoria cadastrada com sucesso.',
+            'show'             => 'Categoria encontrada em nossa base de dados.',
+            'update'           => 'Atualização de categoria bem sucedida.',
+            'destroy'          => 'Categoria removido da nossa base de dados.',
+        ],
     ],
 ];
