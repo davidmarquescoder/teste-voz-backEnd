@@ -61,6 +61,7 @@ class ProductController extends Controller
         try {
             return $this->success(
                 message: __(key: 'messages.response_messages.products.show'),
+                data: $product,
             );
         } catch (Exception $error) {
             return $this->error(message: $error->getMessage(), code: $error->getCode());
