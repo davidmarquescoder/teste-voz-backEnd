@@ -22,6 +22,7 @@ cp .env.example .env
 ```dosini
 APP_NAME="Voz"
 APP_URL=http://localhost:8989
+APP_LOCALE=pt_BR
 
 DB_CONNECTION=pgsql
 DB_HOST=db
