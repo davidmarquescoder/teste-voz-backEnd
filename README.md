@@ -70,7 +70,7 @@ php artisan migrate
 ```
 
 
-### 🚀 Rota base do projeto
+### 🚀 ROTA BASE
 [http://localhost:8989/api](http://localhost:8989/api)
 
 
