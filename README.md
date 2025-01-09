@@ -69,6 +69,13 @@ php artisan key:generate
 php artisan migrate
 ```
 
+### ☄️ Otimização (Opcional)
+```sh
+php artisan optimize
+```
+
+> RECOMENDAÇÃO: Utilize SO Linux ou WSL para melhor desenpenho do docker.
+
 
 ### 🚀 ROTA BASE
 [http://localhost:8989/api](http://localhost:8989/api)
