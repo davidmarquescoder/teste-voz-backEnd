@@ -26,6 +26,7 @@ class UpdateProductRequest extends FormRequest
             'name'        => ['sometimes','string','max:255', Rule::unique('products')->ignore($this->product->id, 'id')],
             'description' => ['sometimes','string','max:255'],
             'price'       => ['sometimes','numeric','min:0'],
+            'category_id' => ['sometimes', 'integer', 'exists:categories,id'],
         ];
     }
 }
