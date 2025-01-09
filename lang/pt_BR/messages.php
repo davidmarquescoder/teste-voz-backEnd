@@ -15,19 +15,23 @@ return [
     ],
 
     'response_messages' => [
-        'products' => [
-            'index'            => 'Produtos recuperados em nossa base de dados.',
-            'store'            => 'Novo produto cadastrado com sucesso.',
-            'show'             => 'Produto encontrado em nossa base de dados.',
-            'update'           => 'Atualização de produto bem sucedida.',
-            'destroy'          => 'Produto removido da nossa base de dados.',
+        'products'   => [
+            'index'   => 'Produtos recuperados em nossa base de dados.',
+            'store'   => 'Novo produto cadastrado com sucesso.',
+            'show'    => 'Produto encontrado em nossa base de dados.',
+            'update'  => 'Atualização de produto bem sucedida.',
+            'destroy' => 'Produto removido da nossa base de dados.',
         ],
         'categories' => [
-            'index'            => 'Categorias recuperadas em nossa base de dados.',
-            'store'            => 'Nova categoria cadastrada com sucesso.',
-            'show'             => 'Categoria encontrada em nossa base de dados.',
-            'update'           => 'Atualização de categoria bem sucedida.',
-            'destroy'          => 'Categoria removido da nossa base de dados.',
+            'index'   => 'Categorias recuperadas em nossa base de dados.',
+            'store'   => 'Nova categoria cadastrada com sucesso.',
+            'show'    => 'Categoria encontrada em nossa base de dados.',
+            'update'  => 'Atualização de categoria bem sucedida.',
+            'destroy' => 'Categoria removido da nossa base de dados.',
+        ],
+        'auth'       => [
+            'login'   => 'Login realizado com sucesso, seja bem-vindo!',
+            'logout'  => 'Você saiu da sua conta!',
         ],
     ],
 ];
