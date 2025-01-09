@@ -74,6 +74,7 @@ php artisan migrate
 php artisan optimize
 ```
 
+
 > RECOMENDAÇÃO: Utilize SO Linux ou WSL para melhor desenpenho do docker.
 
 
