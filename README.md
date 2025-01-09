@@ -43,7 +43,7 @@ REDIS_PORT=6379
 
 ### 🐳 Suba os containers do projeto
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
 
 
