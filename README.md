@@ -1,4 +1,4 @@
-# TESTE VOZ - BACKEND ⚙️ (LARAVEL 11, PHP 8.3)
+# ⚙️ TESTE VOZ - BACKEND (LARAVEL 11, PHP 8.3)
 
 
 ### 🗂️ Clone Repositório
@@ -53,7 +53,7 @@ docker compose exec app bash
 ```
 
 
-### 🌐 Instalar as dependências do projeto
+### 📦 Instalar as dependências do projeto
 ```sh
 composer install
 ```
