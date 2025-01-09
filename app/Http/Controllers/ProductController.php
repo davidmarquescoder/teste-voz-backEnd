@@ -20,7 +20,7 @@ class ProductController extends Controller
     public function index(Request $request): JsonResponse
     {
         try {
-            $products = Product::paginate(
+            $products = Product::with(relations: 'category')->paginate(
                 perPage: $request->query(key: 'per_page', default: 10)
             );
 
@@ -62,6 +62,8 @@ class ProductController extends Controller
     public function show(Product $product): JsonResponse
     {
         try {
+            $product->load(relations: 'category');
+
             return $this->success(
                 message: __(key: 'messages.response_messages.products.show'),
                 data: $product,

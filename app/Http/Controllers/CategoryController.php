@@ -20,13 +20,13 @@ class CategoryController extends Controller
     public function index(Request $request): JsonResponse
     {
         try {
-            $category = Category::paginate(
+            $categories = Category::with(relations: 'products')->paginate(
                 perPage: $request->query(key: 'per_page', default: 10)
             );
 
             return $this->success(
                 message: __(key: 'messages.response_messages.categories.index'),
-                data: $category,
+                data: $categories,
                 code: Response::HTTP_OK,
             );
         } catch (Exception $error) {
@@ -62,6 +62,8 @@ class CategoryController extends Controller
     public function show(Category $category): JsonResponse
     {
         try {
+            $category->load(relations: 'products');
+
             return $this->success(
                 message: __(key: 'messages.response_messages.categories.show'),
                 data: $category,
