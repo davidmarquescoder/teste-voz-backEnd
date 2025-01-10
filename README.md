@@ -80,12 +80,12 @@ php artisan optimize
 
 
 ### 🚀 ROTA BASE
-[http://localhost:8989/api](http://localhost:8989/api)
+[http://localhost:8989/api/](http://localhost:8989/api/)
 
 
 ---
 
-# Autenticação
+# 🔐 Autenticação
 Com exceção da rota `POST /api/login` todas as outras rotas da aplicação são protegidas por autenticação, então é necessário fazer uma requisição para `POST /api/login` com um usuário existente.
 
 Não temos um módulo de criação de usuário disponível, então para criar um usuário, rode o comando:
@@ -95,7 +95,7 @@ Informe os dados necessários e seu usuário será criado no banco.
 
 Para a rota `POST /api/login` você deve enviar um payload com { email, password }, isso irá retornar um token de authenticação caso o usuário exista e dê match entre email e password, use o token para fazer as requisições para as demais rotas que requerem auth.
 
-# Página para interação
+# 🧑‍💻 Página para interação
 Apesar de não haver solicitação para isso, vou disponibilizar um frontend para fazer interação com a API. Caso não queira usar o postman, você poderá testar o CRUD completo através do meu frontend.
 
 ## Acesse a página frontend
@@ -106,7 +106,7 @@ Apesar de não haver solicitação para isso, vou disponibilizar um frontend par
 
 > OBS >>> No caso desse frontend, vou disponibilizar um usuário por e-mail para que você possa acessar, a página ficará disponível até dia 17 23:59H, que é o prazo para entrega do teste.
 
-# **API ENDPOINTS**
+# 🧭 **API ENDPOINTS**
 
 Use ferramentas como [Postman](https://www.postman.com/) para testar os endpoints da API.
 
