@@ -86,14 +86,14 @@ php artisan optimize
 ---
 
 # Autenticação
-Com exceção da rota `POST /api/login` todas as outras rotas da aplicação são autenticadas, então é necessário fazer uma requisição para `POST /api/login` com um usuário existente.
+Com exceção da rota `POST /api/login` todas as outras rotas da aplicação são protegidas por autenticação, então é necessário fazer uma requisição para `POST /api/login` com um usuário existente.
 
-Não temos um módulo de criação de usuário dispnível, então para criar um usuário rode o comando:
+Não temos um módulo de criação de usuário disponível, então para criar um usuário, rode o comando:
 - php artisan create-user
 
 Informe os dados necessários e seu usuário será criado no banco.
 
-Para a rota `POST /api/login` você deve enviar um payload com { email, password }, isso irá retornar um token de authenticação, use-o para fazer as requisições para as demais rotas que requerem auth.
+Para a rota `POST /api/login` você deve enviar um payload com { email, password }, isso irá retornar um token de authenticação caso o usuário exista e dê match entre email e password, use o token para fazer as requisições para as demais rotas que requerem auth.
 
 # Página para interação
 Apesar de não haver solicitação para isso, vou disponibilizar um frontend para fazer interação com a API. Caso não queira usar o postman, você poderá testar o CRUD completo através do meu frontend.
