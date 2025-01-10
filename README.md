@@ -86,7 +86,7 @@ php artisan optimize
 ---
 
 # Autenticação
-Com exceção da rota /login todas as outras rotas da aplicação são autenticadas, então é necessário fazer uma requisição para `POST /api/login` com um usuário existente.
+Com exceção da rota `POST /api/login` todas as outras rotas da aplicação são autenticadas, então é necessário fazer uma requisição para `POST /api/login` com um usuário existente.
 
 Não temos um módulo de criação de usuário dispnível, então para criar um usuário rode o comando:
 - php artisan create-user
