@@ -69,9 +69,14 @@ php artisan key:generate
 php artisan migrate
 ```
 
-### 👩‍💻 Crie um usuário para autenticação (Login)
+### 👤 Crie um usuário para autenticação (Login)
 ```sh
 php artisan create-user
+```
+
+### 🌱 Caso queira popular o banco
+```sh
+php artisan db:seed
 ```
 
 ### ☄️ Otimização (Opcional)
